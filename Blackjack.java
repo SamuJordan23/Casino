@@ -3,7 +3,7 @@ import java.util.*;
 public class Blackjack {
 
 	public static void play() {
-		Mazzo m = new Mazzo();
+		MazzoPoker m = new MazzoPoker();
 		Scanner in=new Scanner(System.in);
 		Random r = new Random();
 		

@@ -1,9 +1,9 @@
-public class Carta {
+public class CartaPoker {
 	
 	private String nome;
 	private int valore;
 
-	public Carta(String nome, int valore) {
+	public CartaPoker(String nome, int valore) {
 		this.nome=nome;
 		this.valore=valore;
 	}
