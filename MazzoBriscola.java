@@ -1,58 +1,58 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mazzo {
+public class MazzoBriscola {
 
-	private List<Carta> carte;
+	private List<CartaBriscola> carte;
 	
-	public Mazzo() {
+	public MazzoBriscola() {
 		carte=new ArrayList<>();
 		
 		
 		
-		carte.add(new Carta("Asso di Bastoni", 1));
-		carte.add(new Carta("Due di Bastoni", 2));
-		carte.add(new Carta("Tre di Bastoni", 3));
-		carte.add(new Carta("Quattro di Bastoni", 4));
-		carte.add(new Carta("Cinque di Bastoni", 5));
-		carte.add(new Carta("Sei di Bastoni", 6));
-		carte.add(new Carta("Sette di Bastoni", 7));
-		carte.add(new Carta("Fante di Bastoni", 0.5));
-		carte.add(new Carta("Cavallo di Bastoni", 0.5));
-		carte.add(new Carta("Re di Bastoni", 0.5));
+		carte.add(new CartaBriscola("Asso di Bastoni", 1));
+		carte.add(new CartaBriscola("Due di Bastoni", 2));
+		carte.add(new CartaBriscola("Tre di Bastoni", 3));
+		carte.add(new CartaBriscola("Quattro di Bastoni", 4));
+		carte.add(new CartaBriscola("Cinque di Bastoni", 5));
+		carte.add(new CartaBriscola("Sei di Bastoni", 6));
+		carte.add(new CartaBriscola("Sette di Bastoni", 7));
+		carte.add(new CartaBriscola("Fante di Bastoni", 0.5));
+		carte.add(new CartaBriscola("Cavallo di Bastoni", 0.5));
+		carte.add(new CartaBriscola("Re di Bastoni", 0.5));
 		
-		carte.add(new Carta("Asso di Spade", 1));
-		carte.add(new Carta("Due di Spade", 2));
-		carte.add(new Carta("Tre di Spade", 3));
-		carte.add(new Carta("Quattro di Spade", 4));
-		carte.add(new Carta("Cinque di Spade", 5));
-		carte.add(new Carta("Sei di Spade", 6));
-		carte.add(new Carta("Sette di Spade", 7));
-		carte.add(new Carta("Fante di Spade", 0.5));
-		carte.add(new Carta("Cavallo di Spade", 0.5));
-		carte.add(new Carta("Re di Spade", 0.5));
+		carte.add(new CartaBriscola("Asso di Spade", 1));
+		carte.add(new CartaBriscola("Due di Spade", 2));
+		carte.add(new CartaBriscola("Tre di Spade", 3));
+		carte.add(new CartaBriscola("Quattro di Spade", 4));
+		carte.add(new CartaBriscola("Cinque di Spade", 5));
+		carte.add(new CartaBriscola("Sei di Spade", 6));
+		carte.add(new CartaBriscola("Sette di Spade", 7));
+		carte.add(new CartaBriscola("Fante di Spade", 0.5));
+		carte.add(new CartaBriscola("Cavallo di Spade", 0.5));
+		carte.add(new CartaBriscola("Re di Spade", 0.5));
 
-		carte.add(new Carta("Asso di Denari", 1));
-		carte.add(new Carta("Due di Denari", 2));
-		carte.add(new Carta("Tre di Denari", 3));
-		carte.add(new Carta("Quattro di Denari", 4));
-		carte.add(new Carta("Cinque di Denari", 5));
-		carte.add(new Carta("Sei di Denari", 6));
-		carte.add(new Carta("Sette di Denari", 7));
-		carte.add(new Carta("Fante di Denari", 0.5));
-		carte.add(new Carta("Cavallo di Denari", 0.5));
-		carte.add(new Carta("Re di Denari", 0));
+		carte.add(new CartaBriscola("Asso di Denari", 1));
+		carte.add(new CartaBriscola("Due di Denari", 2));
+		carte.add(new CartaBriscola("Tre di Denari", 3));
+		carte.add(new CartaBriscola("Quattro di Denari", 4));
+		carte.add(new CartaBriscola("Cinque di Denari", 5));
+		carte.add(new CartaBriscola("Sei di Denari", 6));
+		carte.add(new CartaBriscola("Sette di Denari", 7));
+		carte.add(new CartaBriscola("Fante di Denari", 0.5));
+		carte.add(new CartaBriscola("Cavallo di Denari", 0.5));
+		carte.add(new CartaBriscola("Re di Denari", 0));
 	
-		carte.add(new Carta("Asso di Coppe", 1));
-		carte.add(new Carta("Due di Coppe", 2));
-		carte.add(new Carta("Tre di Coppe", 3));
-		carte.add(new Carta("Quattro di Coppe", 4));
-		carte.add(new Carta("Cinque di Coppe", 5));
-		carte.add(new Carta("Sei di Coppe", 6));
-		carte.add(new Carta("Sette di Coppe", 7));
-		carte.add(new Carta("Fante di Coppe", 0.5));
-		carte.add(new Carta("Cavallo di Coppe", 0.5));
-		carte.add(new Carta("Re di Coppe", 0.5));
+		carte.add(new CartaBriscola("Asso di Coppe", 1));
+		carte.add(new CartaBriscola("Due di Coppe", 2));
+		carte.add(new CartaBriscola("Tre di Coppe", 3));
+		carte.add(new CartaBriscola("Quattro di Coppe", 4));
+		carte.add(new CartaBriscola("Cinque di Coppe", 5));
+		carte.add(new CartaBriscola("Sei di Coppe", 6));
+		carte.add(new CartaBriscola("Sette di Coppe", 7));
+		carte.add(new CartaBriscola("Fante di Coppe", 0.5));
+		carte.add(new CartaBriscola("Cavallo di Coppe", 0.5));
+		carte.add(new CartaBriscola("Re di Coppe", 0.5));
 	
 	
 	}

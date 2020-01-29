@@ -1,11 +1,11 @@
-public class Carta {
+public class CartaBriscola {
 	private String nome;
 	private double valore;
 	
 	
 	
 //costrutore
-	public Carta(String nome, double valore) {
+	public CartaBriscola(String nome, double valore) {
 		this.nome=nome;
 		this.valore=valore;
 	}

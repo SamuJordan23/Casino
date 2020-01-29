@@ -5,7 +5,7 @@ public class SetteMezzo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Mazzo m = new Mazzo();
+		MazzoBriscola m = new MazzoBriscola();
 		Scanner in=new Scanner(System.in); //crea l'oggetto per l'inserimento dei dati da tastiera
 		Random r = new Random();
 		
