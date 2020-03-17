@@ -20,7 +20,7 @@ public class SetteMezzo {
 				}
 				else
 					continue;
-			}
+			} 
 			int punteggio = 0;
 			int n = r.nextInt(40); //Posizione casuale nel mazzo
 			System.out.println("Le tue carte\n " + m.cartaCasuale(n)); //Stampa la carta che è uscita casualmente
