@@ -5,17 +5,17 @@ public class Autenticazione {
 	private String mail;
 	private String password;
 	
-	public Autenticazione(String nome,String cognome,String mail,String password) {
-		this.nome=nome;
-		this.cognome=cognome;
-		this.mail=mail;
-		this.password=password;
+	public Autenticazione(String nome, String cognome, String mail, String password) {
+		this.nome = nome;
+		this.cognome = cognome;
+		this.mail = mail;
+		this.password = password;
 	}
 	public Autenticazione() {
-		nome="";
-		cognome="";
-		mail="";
-		password="";
+		nome = "";
+		cognome = "";
+		mail = "";
+		password = "";
 	}
 	
 	
@@ -43,12 +43,12 @@ public class Autenticazione {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	public void autenticazione(String tipoPersona) {
-		
-	}
-	public void login(String mail,String password) {
-		
+
+	public void login(String mail, String password) {
+		if(mail == this.mail && password == this.password)
+			System.out.println("Loggato correttamente");
+		else
+			System.out.println("Mail o password errati");
 	}
 
 }
