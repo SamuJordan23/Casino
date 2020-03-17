@@ -17,9 +17,9 @@ public class MazzoPoker {
 		carte.add(new CartaPoker("Otto di Cuori", 8));
 		carte.add(new CartaPoker("Nove di Cuori", 9));
 		carte.add(new CartaPoker("Dieci di Cuori", 10));
-		carte.add(new CartaPoker("Jack di Cuori", 10));
-		carte.add(new CartaPoker("Queen di Cuori", 10));
-		carte.add(new CartaPoker("King di Cuori", 10));
+		carte.add(new CartaPoker("Fante di Cuori", 10));
+		carte.add(new CartaPoker("Donna di Cuori", 10));
+		carte.add(new CartaPoker("Re di Cuori", 10));
 		
 		carte.add(new CartaPoker("Asso di Picche", 11));
 		carte.add(new CartaPoker("Due di Picche", 2));
@@ -31,9 +31,9 @@ public class MazzoPoker {
 		carte.add(new CartaPoker("Otto di Picche", 8));
 		carte.add(new CartaPoker("Nove di Picche", 9));
 		carte.add(new CartaPoker("Dieci di Picche", 10));
-		carte.add(new CartaPoker("Jack di Picche", 10));
-		carte.add(new CartaPoker("Queen di Picche", 10));
-		carte.add(new CartaPoker("King di Picche", 10));
+		carte.add(new CartaPoker("Fante di Picche", 10));
+		carte.add(new CartaPoker("Donna di Picche", 10));
+		carte.add(new CartaPoker("Re di Picche", 10));
 
 		carte.add(new CartaPoker("Asso di Fiori", 11));
 		carte.add(new CartaPoker("Due di Fiori", 2));
@@ -45,9 +45,9 @@ public class MazzoPoker {
 		carte.add(new CartaPoker("Otto di Fiori", 8));
 		carte.add(new CartaPoker("Nove di Fiori", 9));
 		carte.add(new CartaPoker("Dieci di Fiori", 10));
-		carte.add(new CartaPoker("Jack di Fiori", 10));
-		carte.add(new CartaPoker("Queen di Fiori", 10));
-		carte.add(new CartaPoker("King di Fiori", 10));
+		carte.add(new CartaPoker("Fante di Fiori", 10));
+		carte.add(new CartaPoker("Donna di Fiori", 10));
+		carte.add(new CartaPoker("Re di Fiori", 10));
 
 		carte.add(new CartaPoker("Asso di Quadri", 11));
 		carte.add(new CartaPoker("Due di Quadri", 2));
@@ -59,9 +59,9 @@ public class MazzoPoker {
 		carte.add(new CartaPoker("Otto di Quadri", 8));
 		carte.add(new CartaPoker("Nove di Quadri", 9));
 		carte.add(new CartaPoker("Dieci di Quadri", 10));
-		carte.add(new CartaPoker("Jack di Quadri", 10));
-		carte.add(new CartaPoker("Queen di Quadri", 10));
-		carte.add(new CartaPoker("King di Quadri", 10));
+		carte.add(new CartaPoker("Fante di Quadri", 10));
+		carte.add(new CartaPoker("Donna di Quadri", 10));
+		carte.add(new CartaPoker("Re di Quadri", 10));
 	
 	}
 
