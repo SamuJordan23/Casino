@@ -134,4 +134,5 @@ public class SetteMezzo {
 		}
 		
 		return punteggio;
-	}
+		}
+}
