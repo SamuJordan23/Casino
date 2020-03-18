@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Utente extends Autenticazione {
+public class Utente extends Autenticazione { //prova
 	private int codiceCartaDiCredito;
 	private int cvvCartaDiCredito;
 	private List <String> listaPartite;
