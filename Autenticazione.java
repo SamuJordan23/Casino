@@ -1,4 +1,4 @@
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Autenticazione {
@@ -63,18 +63,8 @@ public class Autenticazione {
 		int codiceCartaDiCredito;
 		int cvvCartaDiCredito;
 
-		File out = new File("utenti.txt", 'W');
-		File in = new File("utenti.txt", 'R');
 		Scanner s = new Scanner(System.in);
-		
-		String file = "";
-		try {
-			while(true) {
-				file += in.fromFile();
-			}
-		} catch ( FileException exception ) {
-			System.out.println(exception.getMatter());
-		}
+		BufferedWriter out = new BufferedWriter( new FileWriter("utenti.txt", true) );
 
 		System.out.print("Inserisci il nome: ");
 		nome = s.nextLine();
@@ -91,13 +81,15 @@ public class Autenticazione {
 		
 		s.nextLine();
 		
-		try {
-			out.toFile(file + id + ";" + nome + ";" + cognome + ";" + mail + ";" + password + ";" + codiceCartaDiCredito + ";" + cvvCartaDiCredito + ";1");
+		try{
+			out.write(id + ";" + nome + ";" + cognome + ";" + mail + ";" + password + ";" + codiceCartaDiCredito + ";" + cvvCartaDiCredito + ";1");
+			out.newLine();
 			id++;
-		} catch ( FileException exception ) {
-			System.out.println(exception.getMatter());
+		}catch (Exception e){
+			System.out.println("Error while writing to file: " + e.getMessage());
 		}
-		out.closeFile();
+		
+		out.close();
 	}
 	
 	public void addAmministratore() throws IOException {
@@ -106,17 +98,8 @@ public class Autenticazione {
 		String mail;
 		String password;
 		
-		File out = new File("amministratori.txt", 'W');
-		File in = new File("amministratori.txt", 'R');
 		Scanner s = new Scanner(System.in);
-		
-		String file = "";
-		try {
-			while(true) {
-				file += in.fromFile();
-			}
-		} catch ( FileException exception ) {
-		}
+		BufferedWriter out = new BufferedWriter( new FileWriter("amministratori.txt", true) );
 
 		System.out.print("Inserisci il nome: ");
 		nome = s.nextLine();
@@ -127,12 +110,15 @@ public class Autenticazione {
 		System.out.print("Inserisci la password: ");
 		password = s.nextLine();
 		
-		try {
-			out.toFile(file + id + ";" + nome + ";" + cognome + ";" + mail + ";" + password + ";2");
+		try{
+			out.write(id + ";" + nome + ";" + cognome + ";" + mail + ";" + password + ";2");
+			out.newLine();
 			id++;
-		} catch ( FileException exception ) {
+		} catch (Exception e) {
+			System.out.println("Error while writing to file: " + e.getMessage());
 		}
-		out.closeFile();
+		
+		out.close();
 	}
 
 }
