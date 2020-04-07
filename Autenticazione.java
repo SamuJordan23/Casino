@@ -129,4 +129,16 @@ public class Autenticazione {
 		System.out.println("Loggato correttamente");
 		in.close();
 	}
+	
+	public void aggiornaLista(String str) throws IOException {
+		BufferedWriter out = new BufferedWriter( new FileWriter(currentId+".txt", true) );
+		try{
+			out.write(str);
+			out.newLine();
+		} catch (Exception e) {
+			System.out.println("Error while writing to file: " + e.getMessage());
+		}
+		out.close();
+	}
+	
 }
