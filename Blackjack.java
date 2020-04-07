@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.*;
 
 public class Blackjack {
 
-	public static void play() {
+	public static void play(Autenticazione a) throws IOException {
 		MazzoPoker m = new MazzoPoker();
 		Scanner in = new Scanner(System.in);
 		Random r = new Random();
@@ -12,6 +13,7 @@ public class Blackjack {
 			int banco = banco();
 			if(banco == 21) {
 				System.out.println("Il banco ha vinto facendo BlackJack\n");
+				a.aggiornaLista("BlackJack;Perso");
 				System.out.print("Vuoi giocare ancora? (s/n): ");
 				char giocaAncora = in.nextLine().charAt(0);
 				if(giocaAncora != 's' && giocaAncora != 'S') {
@@ -33,6 +35,7 @@ public class Blackjack {
 				punteggio += m.valoreCarta(n);
 			if(punteggio == 21) { //Controlla se hai fatto blackjack
 				System.out.println("Hai fatto Blackjack!");
+				a.aggiornaLista("BlackJack;Vinto");
 			} else {
 				System.out.println("Il tuo punteggio è " + punteggio);
 				System.out.print("Vuoi un altra carta? (s/n): ");
@@ -61,18 +64,25 @@ public class Blackjack {
 					default: break;
 				}
 				
-				if(punteggio == 21)
+				if(punteggio == 21) {
 					System.out.println("Hai vinto facendo BlackJack!");
-				else if(punteggio > 21)
+					a.aggiornaLista("BlackJack;Vinto");
+				} else if(punteggio > 21) {
 					System.out.println("Hai sballato con un punteggio di " + punteggio + "\n");
-				else if(banco > 21)
+					a.aggiornaLista("BlackJack;Perso");
+				} else if(banco > 21) {
 					System.out.println("Il banco ha sballato con " + banco + ", hai vinto con un punteggio di " + punteggio + "\n");
-				else if(punteggio > banco)
+					a.aggiornaLista("BlackJack;Vinto");
+				} else if(punteggio > banco) {
 					System.out.println("Hai vinto con un punteggio di " + punteggio + " contro il banco che ha fatto " + banco + "\n");
-				else if(punteggio == banco)
+					a.aggiornaLista("BlackJack;Vinto");
+				} else if(punteggio == banco) {
 					System.out.println("Hai pareggiato con un punteggio di " + punteggio + "\n");
-				else
+					a.aggiornaLista("BlackJack;Pareggio");
+				} else {
 					System.out.println("Hai perso con un punteggio di " + punteggio + " contro il banco che ha fatto " + banco + "\n");
+					a.aggiornaLista("BlackJack;Perso");
+				}
 			}
 
 			System.out.print("Vuoi giocare ancora? (s/n): ");
