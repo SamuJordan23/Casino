@@ -2,59 +2,23 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Autenticazione {
-	private String nome;
-	private String cognome;
-	private String mail;
-	private String password;
+	
+	private int currentId;
 	
 	private static int id = 1;
 	
-	public Autenticazione(String nome, String cognome, String mail, String password) {
-		this.nome = nome;
-		this.cognome = cognome;
-		this.mail = mail;
-		this.password = password;
-	}
 	public Autenticazione() {
-		nome = "";
-		cognome = "";
-		mail = "";
-		password = "";
+		currentId = 0;
 	}
 	
-	
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getCognome() {
-		return cognome;
-	}
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-	public String getMail() {
-		return mail;
-	}
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	public int getCurrentId() {
+		return currentId;
 	}
 
-	public void login(String mail, String password) {
-		if(mail == this.mail && password == this.password)
-			System.out.println("Loggato correttamente");
-		else
-			System.out.println("Mail o password errati");
+	public void setCurrentId(int currentId) {
+		this.currentId = currentId;
 	}
-	
+
 	public void addUtente() throws IOException {
 		String nome;
 		String cognome;
@@ -99,7 +63,7 @@ public class Autenticazione {
 		String password;
 		
 		Scanner s = new Scanner(System.in);
-		BufferedWriter out = new BufferedWriter( new FileWriter("amministratori.txt", true) );
+		BufferedWriter out = new BufferedWriter( new FileWriter("utenti.txt", true) );
 
 		System.out.print("Inserisci il nome: ");
 		nome = s.nextLine();
@@ -120,5 +84,49 @@ public class Autenticazione {
 		
 		out.close();
 	}
-
+	
+	public void login() throws IOException {
+		Scanner s = new Scanner(System.in);
+		BufferedReader in = new BufferedReader( new FileReader("utenti.txt") );
+		
+		String mail;
+		String password;
+		String tmp = "";
+		
+		System.out.print("Inserisci la mail: ");
+		mail = s.nextLine();
+		
+		try {
+			while(true) {
+				tmp = in.readLine();
+				if( tmp.split(";")[3].equals(mail) )
+					break;
+			}
+		} catch(Exception e) {
+			System.out.println("Mail non esistente");
+			in.close();
+			return;
+		}
+		
+		
+		while(true) {
+			System.out.print("Inserisci la password (0 per uscire): ");
+			password = s.nextLine();
+			
+			if(password.equals("0")) {
+				in.close();
+				return;
+			}
+			
+			if( tmp.split(";")[4].equals(password) ) {
+				currentId = Integer.valueOf(tmp.split(";")[0]);
+				break;
+			}
+			else
+				System.out.println("Password errata");
+		}
+			
+		System.out.println("Loggato correttamente");
+		in.close();
+	}
 }
